@@ -3,13 +3,13 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title inertia>{{ config('app.name', 'Tırnak İçinde Dergi') }}</title>
+        <title inertia>{{ 'tırnak içinde | kültür, sanat ve edebiyat dergisi' }}</title>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
         @routes
         <script src="{{ mix('js/app.js') }}" defer></script>
     </head>
-    <body class="font-sans antialiased bg-primary">
+    <body class="font-sans antialiased bg-primary-500">
         @inertia
     </body>
 </html>

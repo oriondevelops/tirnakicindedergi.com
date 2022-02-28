@@ -11,7 +11,9 @@ createInertiaApp({
     title: (title) => `${title} - ${appName}`,
     resolve: name => {
         const page = require(`./Pages/${name}.vue`).default
-        page.layout = page.layout || Guest
+        if (page.layout === undefined && !name.startsWith('Auth/')) {
+            page.layout = Guest
+        }
         return page
     },
     setup({ el, app, props, plugin }) {

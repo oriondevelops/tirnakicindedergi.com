@@ -15,6 +15,8 @@ use Inertia\Inertia;
 |
 */
 
+// TODO Remove ziggy and public routes
+
 Route::get('/', function () {
     return Inertia::render('Welcome', [
         'canLogin' => Route::has('login'),
@@ -22,7 +24,11 @@ Route::get('/', function () {
         'laravelVersion' => Application::VERSION,
         'phpVersion' => PHP_VERSION,
     ]);
-});
+})->name('welcome');
+
+Route::inertia('volumes', 'Volumes')->name('volumes');
+Route::inertia('about', 'About')->name('about');
+Route::inertia('contact', 'Contact')->name('contact');
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
