@@ -1,5 +1,5 @@
 <template>
-    <Head title="Hakkımızda"/>
+    <Head title="hakkımızda"/>
     This is about.
 </template>
 

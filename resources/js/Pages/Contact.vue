@@ -1,11 +1,10 @@
 <template>
+    <Head title="iletişim"/>
     This is contact.
 </template>
 
-<script>
-export default {
-    name: "Contact"
-}
+<script setup>
+import {Head} from "@inertiajs/inertia-vue3";
 </script>
 
 <style scoped>

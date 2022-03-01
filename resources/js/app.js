@@ -5,10 +5,10 @@ import { createInertiaApp, Link } from '@inertiajs/inertia-vue3';
 import { InertiaProgress } from '@inertiajs/progress';
 import Guest from '@/Layouts/Guest';
 
-const appName = window.document.getElementsByTagName('title')[0]?.innerText || 'Tırnak İçinde';
+const appName = window.document.getElementsByTagName('title')[0]?.innerText || 'tırnak içinde dergi';
 
 createInertiaApp({
-    title: (title) => `${title} - ${appName}`,
+    title: (title) => `${title} | ${appName}`,
     resolve: name => {
         const page = require(`./Pages/${name}.vue`).default
         if (page.layout === undefined && !name.startsWith('Auth/')) {

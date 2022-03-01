@@ -1,11 +1,9 @@
 <template>
-    This is volumes.
+    <Head title="sayılar"/>
 </template>
 
-<script>
-export default {
-    name: "Volumes"
-}
+<script setup>
+import {Head} from "@inertiajs/inertia-vue3";
 </script>
 
 <style scoped>
