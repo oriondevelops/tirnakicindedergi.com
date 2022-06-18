@@ -22915,7 +22915,7 @@ __webpack_require__.r(__webpack_exports__);
   props: {
     post: Object,
     content: String,
-    published_at: Object
+    publish_date: String
   },
   setup: function setup(__props, _ref) {
     var expose = _ref.expose;
@@ -25317,26 +25317,42 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 
 var _hoisted_1 = {
-  "class": "prose max-w-3xl"
+  "class": "prose m-auto max-w-3xl"
 };
 var _hoisted_2 = {
-  "class": "my-3 text-3xl tracking-tight font-extrabold text-gray-900 sm:text-4xl"
+  "class": "mt-3 mb-0 text-3xl font-extrabold text-primary-500/75 border-b-8 border-primary-200 hover:text-primary-400/75 hover:tracking-widest duration-1000 cursor-pointer sm:text-4xl"
 };
 var _hoisted_3 = {
+  "class": "flex inline-flex space-x-4 my-0 text-sm"
+};
+var _hoisted_4 = {
+  key: 0,
+  "class": "hover:text-gray-500 cursor-pointer"
+};
+var _hoisted_5 = {
+  key: 1,
+  "class": "hover:text-gray-500 cursor-pointer"
+};
+var _hoisted_6 = {
+  key: 0,
   "class": "text-xl text-gray-500"
 };
-var _hoisted_4 = ["innerHTML"];
+var _hoisted_7 = ["innerHTML"];
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("article", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h2", _hoisted_2, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.post.title), 1
   /* TEXT */
-  ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", _hoisted_3, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.post.excerpt), 1
+  ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [$props.publish_date ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("p", _hoisted_4, "📅 " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.publish_date), 1
   /* TEXT */
-  )]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+  )) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), $props.post.author ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("p", _hoisted_5, "🖊️ " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.post.author.name), 1
+  /* TEXT */
+  )) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)]), $props.post.excerpt ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("p", _hoisted_6, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.post.excerpt), 1
+  /* TEXT */
+  )) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
     "class": "text-justify leading-loose",
     innerHTML: $props.content
   }, null, 8
   /* PROPS */
-  , _hoisted_4)]);
+  , _hoisted_7)]);
 }
 
 /***/ }),
