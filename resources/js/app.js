@@ -3,7 +3,7 @@ require('./bootstrap');
 import { createApp, h } from 'vue';
 import { createInertiaApp, Link } from '@inertiajs/inertia-vue3';
 import { InertiaProgress } from '@inertiajs/progress';
-import Guest from '@/Layouts/Guest';
+import Master from '@/Layouts/Master';
 
 const appName = window.document.getElementsByTagName('title')[0]?.innerText || 'tırnak içinde dergi';
 
@@ -12,7 +12,7 @@ createInertiaApp({
     resolve: name => {
         const page = require(`./Pages/${name}.vue`).default
         if (page.layout === undefined && !name.startsWith('Auth/')) {
-            page.layout = Guest
+            page.layout = Master
         }
         return page
     },

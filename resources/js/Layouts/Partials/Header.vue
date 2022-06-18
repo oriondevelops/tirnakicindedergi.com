@@ -1,9 +1,9 @@
 <template>
-    <Disclosure as="nav" class="bg-secondary mt-0 rounded-none md:rounded-none" v-slot="{ open }">
+    <Disclosure as="nav" class="bg-secondary rounded-t md:rounded-none" v-slot="{ open }">
         <div class="max-w-7xl mx-auto px-2 sm:px-4 lg:px-6">
             <div class="flex justify-between h-12">
                 <div class="flex">
-                    <div class="-ml-2 mr-2 flex items-center md:hidden">
+                    <div class="-ml-1 mr-2 flex items-center md:hidden">
                         <!-- Mobile menu button -->
                         <DisclosureButton class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary-500">
                             <span class="sr-only">Open main menu</span>
@@ -16,14 +16,16 @@
                         <img class="hidden lg:block h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-logo-indigo-500-mark-white-text.svg" alt="Workflow" />
                     </div>-->
                     <div class="hidden md:ml-0 md:flex md:items-center md:space-x-4">
-                        <Link v-for="item in navigation" :key="item.name" :href="item.href" :class="[item.current ? 'bg-primary-500 text-white' : 'text-gray-300 hover:bg-gray-500/50 hover:text-white', 'px-3 py-1 rounded-md text-sm font-medium']" :aria-current="item.current ? 'page' : undefined">{{ item.name }}</Link>
+                        <Link v-for="item in navigation" :key="item.name" :href="item.href" :class="[item.current ? 'bg-primary-600 text-white' : 'text-gray-300 hover:bg-primary-500 hover:text-white', 'px-3 py-1 rounded-md text-sm font-medium']" :aria-current="item.current ? 'page' : undefined">{{ item.name }}</Link>
                     </div>
                 </div>
                 <div class="flex items-center">
                     <div class="flex-shrink-0">
-                        <button type="button" class="relative inline-flex items-center px-2 py-0.5 my-1 sm:my-0 sm:py-1 lg:px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-primary-400 hover:bg-primary-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-primary-500">
-                            <MailIcon class="-ml-1 mr-2 h-5 w-5" aria-hidden="true" />
-                            <span>İçerik Gönder</span>
+                        <button type="button"
+                                title="İçerik Gönder"
+                                class="relative inline-flex items-center px-2 py-1 my-0 sm:my-0 sm:py-1 lg:px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-primary-500 hover:bg-primary-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-primary-500">
+                            <MailIcon class="-ml-1 -mr-1 sm:mr-2 h-5 w-5" aria-hidden="true" />
+                            <span class="hidden sm:flex">İçerik Gönder</span>
                         </button>
                     </div>
                     <div class="hidden md:ml-4 md:flex-shrink-0 md:flex md:items-center">
@@ -55,7 +57,7 @@
 
         <DisclosurePanel class="md:hidden">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <DisclosureButton v-for="item in navigation" :key="item.name" as="a" :href="item.href" :class="[item.current ? 'bg-primary-500 text-white' : 'text-gray-300 hover:bg-gray-500/50 hover:text-white', 'block px-3 py-2 rounded-md text-base font-medium']" :aria-current="item.current ? 'page' : undefined">{{ item.name }}</DisclosureButton>
+                <DisclosureButton v-for="item in navigation" :key="item.name" as="a" :href="item.href" :class="[item.current ? 'bg-primary-500 text-white' : 'text-gray-300 hover:bg-gray-500/50 hover:text-white', 'block px-3 py-2 rounded-md text-sm font-medium']" :aria-current="item.current ? 'page' : undefined">{{ item.name }}</DisclosureButton>
             </div>
             <div class="pt-4 pb-3 border-t border-gray-700">
                 <div class="flex items-center px-5 sm:px-6">
@@ -72,7 +74,7 @@
                     </button>
                 </div>
                 <div class="mt-3 px-2 space-y-1 sm:px-3">
-                    <DisclosureButton v-for="item in userNavigation" :key="item.name" as="a" :href="item.href" class="block px-3 py-2 rounded-md text-base font-medium text-gray-400 hover:text-white hover:bg-primary-700">{{ item.name }}</DisclosureButton>
+                    <DisclosureButton v-for="item in userNavigation" :key="item.name" as="a" :href="item.href" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-400 hover:text-white hover:bg-primary-700">{{ item.name }}</DisclosureButton>
                 </div>
             </div>
         </DisclosurePanel>
