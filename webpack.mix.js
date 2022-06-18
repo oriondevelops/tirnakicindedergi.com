@@ -20,6 +20,12 @@ mix.js('resources/js/app.js', 'public/js')
     ])
     .webpackConfig(require('./webpack.config'));
 
+mix.options({
+    terser: {
+        extractComments: false,
+    }
+})
+
 if (mix.inProduction()) {
     mix.version();
 }
