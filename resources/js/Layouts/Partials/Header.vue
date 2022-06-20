@@ -16,7 +16,7 @@
                         <img class="hidden lg:block h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-logo-indigo-500-mark-white-text.svg" alt="Workflow" />
                     </div>-->
                     <div class="hidden md:ml-0 md:flex md:items-center md:space-x-4">
-                        <Link v-for="item in navigation" :key="item.name" :href="item.href" :class="[item.current ? 'bg-primary-600 text-white' : 'text-gray-300 hover:bg-primary-500 hover:text-white', 'px-3 py-1 rounded-md text-sm font-medium']" :aria-current="item.current ? 'page' : undefined">{{ item.name }}</Link>
+                        <Link v-for="item in navigation" :key="item.name" :href="item.href" :class="[item.current ? 'bg-primary-600 text-white' : 'text-gray-300 hover:bg-primary-500 hover:text-white', 'lowercase px-3 py-1 rounded-md text-sm font-medium']" :aria-current="item.current ? 'page' : undefined">{{ item.name }}</Link>
                     </div>
                 </div>
                 <div class="flex items-center">
@@ -25,7 +25,7 @@
                                 title="İçerik Gönder"
                                 class="relative inline-flex items-center px-2 py-1 my-0 sm:my-0 sm:py-1 lg:px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-primary-500 hover:bg-primary-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-primary-500">
                             <MailIcon class="-ml-1 -mr-1 sm:mr-2 h-5 w-5" aria-hidden="true" />
-                            <span class="hidden sm:flex">İçerik Gönder</span>
+                            <span class="lowercase hidden sm:flex">İçerik Gönder</span>
                         </button>
                     </div>
                     <div class="hidden md:ml-4 md:flex-shrink-0 md:flex md:items-center">
@@ -45,7 +45,7 @@
                             <transition enter-active-class="transition ease-out duration-200" enter-from-class="transform opacity-0 scale-95" enter-to-class="transform opacity-100 scale-100" leave-active-class="transition ease-in duration-75" leave-from-class="transform opacity-100 scale-100" leave-to-class="transform opacity-0 scale-95">
                                 <MenuItems class="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
                                     <MenuItem v-for="item in userNavigation" :key="item.name" v-slot="{ active }">
-                                        <a :href="item.href" :class="[active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700']">{{ item.name }}</a>
+                                        <a :href="item.href" :class="[active ? 'bg-gray-100' : '', 'lowercase block px-4 py-2 text-sm text-gray-700']">{{ item.name }}</a>
                                     </MenuItem>
                                 </MenuItems>
                             </transition>
@@ -57,7 +57,7 @@
 
         <DisclosurePanel class="md:hidden">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <DisclosureButton v-for="item in navigation" :key="item.name" as="a" :href="item.href" :class="[item.current ? 'bg-primary-500 text-white' : 'text-gray-300 hover:bg-gray-500/50 hover:text-white', 'block px-3 py-2 rounded-md text-sm font-medium']" :aria-current="item.current ? 'page' : undefined">{{ item.name }}</DisclosureButton>
+                <DisclosureButton v-for="item in navigation" :key="item.name" as="a" :href="item.href" :class="[item.current ? 'bg-primary-500 text-white' : 'text-gray-300 hover:bg-gray-500/50 hover:text-white', 'lowercase block px-3 py-2 rounded-md text-sm font-medium']" :aria-current="item.current ? 'page' : undefined">{{ item.name }}</DisclosureButton>
             </div>
             <div class="pt-4 pb-3 border-t border-gray-700">
                 <div class="flex items-center px-5 sm:px-6">
@@ -74,7 +74,7 @@
                     </button>
                 </div>
                 <div class="mt-3 px-2 space-y-1 sm:px-3">
-                    <DisclosureButton v-for="item in userNavigation" :key="item.name" as="a" :href="item.href" class="block px-3 py-2 rounded-md text-sm font-medium text-gray-400 hover:text-white hover:bg-primary-700">{{ item.name }}</DisclosureButton>
+                    <DisclosureButton v-for="item in userNavigation" :key="item.name" as="a" :href="item.href" class="lowercase block px-3 py-2 rounded-md text-sm font-medium text-gray-400 hover:text-white hover:bg-primary-700">{{ item.name }}</DisclosureButton>
                 </div>
             </div>
         </DisclosurePanel>

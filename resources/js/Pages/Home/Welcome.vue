@@ -50,7 +50,7 @@ defineProps({
     </div>
 
     <!-- Media Section -->
-    <!--<Gallery /> -->
+    <!--<Gallery />-->
 
     <!-- Reader Content -->
     <!--<div class="relative mx-auto divide-y-2 divide-gray-200">

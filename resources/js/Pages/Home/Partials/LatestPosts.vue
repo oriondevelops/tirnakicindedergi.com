@@ -1,6 +1,6 @@
 <template>
     <div class="mt-6 pt-10 grid gap-16 lg:grid-cols-2 lg:gap-x-5 lg:gap-y-12">
-        <div v-for="post in posts" :key="post.title">
+        <div v-for="post in posts" :key="post.title" class="hover:p-6 hover:border-l-4 border-primary-400 hover:bg-gray-50 hover:rounded-3xl duration-[2066ms]">
             <p class="text-xs text-gray-500">
                 <time :datetime="post.publish_date">{{ post.publish_date }}</time>
             </p>

@@ -10,9 +10,8 @@
                         <span class="sr-only">View details for {{ file.title }}</span>
                     </button>
                 </div>
-                <p class="mt-2 block text-sm font-medium text-gray-900 truncate pointer-events-none">{{
-                        file.title
-                    }}</p>
+                <p class="mt-2 block text-sm font-medium text-gray-900 truncate pointer-events-none">
+                    {{ file.title }}</p>
                 <p class="block text-sm font-medium text-gray-500 pointer-events-none">{{ file.date }}</p>
             </a></li>
     </ul>

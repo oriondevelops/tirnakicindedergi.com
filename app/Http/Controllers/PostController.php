@@ -30,11 +30,11 @@ class PostController extends Controller
         $post = WinkPost::where(['slug' => $slug])
                 ->published()
                 ->live()
-                ->with(['author'])
+                ->with(['author', 'tags'])
                 ->first() ?? abort(404);
         return Inertia::render('Posts/Single', [
             'post' => $post,
-            'content' => $post->content,
+            'content' => (String) $post->content,
             'publish_date' => $post->publish_date->translatedFormat('m F, Y')
         ]);
     }
