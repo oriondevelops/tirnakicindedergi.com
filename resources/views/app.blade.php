@@ -27,6 +27,12 @@
     <link rel="manifest" href="{{ asset('site.webmanifest') }}">
     @routes
 
+    <meta name="description" content="kültür, sanat ve edebiyat dergisi."/>
+    <meta property="og:description" content="kültür, sanat ve edebiyat dergisi.">
+    <meta property="og:url" content="{{ request()->fullUrl() }}">
+    <meta property="og:image" content="{{ asset('media/logo.webp') }}"/>
+    <link rel="canonical" href="https://tirnakicindedergi.com"/>
+
     <script src="{{ mix('js/app.js') }}" defer></script>
 </head>
 <body class="font-sans antialiased bg-primary-500">

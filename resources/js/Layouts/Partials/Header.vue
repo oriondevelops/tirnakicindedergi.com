@@ -1,6 +1,6 @@
 <template>
     <Disclosure as="nav" class="bg-secondary rounded-t md:rounded-none" v-slot="{ open }">
-        <div class="max-w-7xl mx-auto px-2 sm:px-4 lg:px-6">
+        <div class="max-w-7xl mx-auto px-2 sm:px-4">
             <div class="flex justify-between h-12">
                 <div class="flex">
                     <div class="-ml-1 mr-2 flex items-center md:hidden">
@@ -11,30 +11,23 @@
                             <XIcon v-else class="block h-6 w-6" aria-hidden="true" />
                         </DisclosureButton>
                     </div>
-                    <!--<div class="flex-shrink-0 flex items-center">
-                        <img class="block lg:hidden h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg" alt="Workflow" />
-                        <img class="hidden lg:block h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-logo-indigo-500-mark-white-text.svg" alt="Workflow" />
-                    </div>-->
+                    <div class="flex-shrink-0 flex items-center md:mr-6">
+                        <img class="block lg:hidden h-7 w-auto" src="/media/logo.png" alt="tırnak içinde dergi" />
+                        <img class="hidden lg:block h-7 w-auto" src="/media/logo.png" alt="tırnak içinde dergi" />
+                    </div>
                     <div class="hidden md:ml-0 md:flex md:items-center md:space-x-4">
                         <Link v-for="item in navigation" :key="item.name" :href="item.href" :class="[item.current ? 'bg-primary-600 text-white' : 'text-gray-300 hover:bg-primary-500 hover:text-white', 'lowercase px-3 py-1 rounded-md text-sm font-medium']" :aria-current="item.current ? 'page' : undefined">{{ item.name }}</Link>
                     </div>
                 </div>
                 <div class="flex items-center">
-                    <div class="flex-shrink-0" title="İçerik Gönder">
-                        <button type="button"
-                                title="İçerik Gönder"
-                                class="relative inline-flex items-center px-2 py-1 my-0 sm:my-0 sm:py-1 lg:px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-primary-500 hover:bg-primary-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-primary-500">
-                            <MailIcon class="-ml-1 -mr-1 sm:mr-2 h-5 w-5" aria-hidden="true" />
-                            <span class="lowercase hidden sm:flex">İçerik Gönder</span>
-                        </button>
-                    </div>
-                    <div class="hidden md:ml-4 md:flex-shrink-0 md:flex md:items-center">
+                    <SubmitContent />
+                    <!--<div class="hidden md:ml-4 md:flex-shrink-0 md:flex md:items-center">
                         <button type="button" class="bg-gray-800 p-1 rounded-full text-gray-400 hover:text-white focus:outline-none">
                             <span class="sr-only">View notifications</span>
                             <BellIcon class="h-5 w-5" aria-hidden="true" />
                         </button>
 
-                        <!-- Profile dropdown -->
+                        &lt;!&ndash; Profile dropdown &ndash;&gt;
                         <Menu as="div" class="ml-3 relative">
                             <div>
                                 <MenuButton class="bg-gray-800 flex text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-primary-500">
@@ -50,16 +43,16 @@
                                 </MenuItems>
                             </transition>
                         </Menu>
-                    </div>
+                    </div>-->
                 </div>
             </div>
         </div>
 
-        <DisclosurePanel class="md:hidden">
+       <DisclosurePanel class="md:hidden">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                 <DisclosureButton v-for="item in navigation" :key="item.name" as="a" :href="item.href" :class="[item.current ? 'bg-primary-500 text-white' : 'text-gray-300 hover:bg-gray-500/50 hover:text-white', 'lowercase block px-3 py-2 rounded-md text-sm font-medium']" :aria-current="item.current ? 'page' : undefined">{{ item.name }}</DisclosureButton>
             </div>
-            <div class="pt-4 pb-3 border-t border-gray-700">
+            <!--<div class="pt-4 pb-3 border-t border-gray-700">
                 <div class="flex items-center px-5 sm:px-6">
                     <div class="flex-shrink-0">
                         <img class="h-10 w-10 rounded-full" :src="user.imageUrl" alt="" />
@@ -76,16 +69,17 @@
                 <div class="mt-3 px-2 space-y-1 sm:px-3">
                     <DisclosureButton v-for="item in userNavigation" :key="item.name" as="a" :href="item.href" class="lowercase block px-3 py-2 rounded-md text-sm font-medium text-gray-400 hover:text-white hover:bg-primary-700">{{ item.name }}</DisclosureButton>
                 </div>
-            </div>
+            </div>-->
         </DisclosurePanel>
     </Disclosure>
 </template>
 
 <script setup>
 import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/vue'
-import { BellIcon, MenuIcon, XIcon, MailIcon } from '@heroicons/vue/outline'
+import { BellIcon, MenuIcon, XIcon } from '@heroicons/vue/outline'
 import {usePage} from "@inertiajs/inertia-vue3";
 import {computed} from "vue";
+import SubmitContent from './SubmitContent';
 
 const user = {
     name: 'Tom Cook',

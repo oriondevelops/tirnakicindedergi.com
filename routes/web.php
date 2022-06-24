@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\ContentSubmissionController;
 use App\Http\Controllers\PostController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
@@ -48,6 +49,7 @@ Route::inertia('volumes', 'Volumes')->name('volumes');
 Route::inertia('about', 'About')->name('about');
 Route::inertia('contact', 'Contact')->name('contact');
 Route::post('contact', ContactController::class)->name('contact.post');
+Route::post('content', ContentSubmissionController::class)->name('content.post');
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
