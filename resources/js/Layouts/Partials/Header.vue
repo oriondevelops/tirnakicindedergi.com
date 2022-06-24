@@ -20,7 +20,7 @@
                     </div>
                 </div>
                 <div class="flex items-center">
-                    <div class="flex-shrink-0">
+                    <div class="flex-shrink-0" title="İçerik Gönder">
                         <button type="button"
                                 title="İçerik Gönder"
                                 class="relative inline-flex items-center px-2 py-1 my-0 sm:my-0 sm:py-1 lg:px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-primary-500 hover:bg-primary-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-primary-500">
