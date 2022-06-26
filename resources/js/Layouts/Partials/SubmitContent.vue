@@ -4,9 +4,10 @@
                 title="İçerik Gönder"
                 class="relative inline-flex items-center px-2 py-1 my-0 sm:my-0 sm:py-1 lg:px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-primary-500 hover:bg-primary-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-primary-500">
             <MailIcon class="-ml-1 -mr-1 sm:mr-2 h-5 w-5" aria-hidden="true"/>
-            <span class="lowercase hidden sm:flex">İçerik Gönder</span>
+            <span id="submitContentButton" class="lowercase hidden sm:flex">İçerik Gönder</span>
         </button>
     </div>
+    <BasicNotification v-if="form.wasSuccessful">Gönderdiğiniz içerik bize ulaştı.</BasicNotification>
     <TransitionRoot as="template" :show="open">
         <Dialog as="div" class="fixed inset-0 overflow-hidden" @close="open = false">
             <div class="absolute inset-0 overflow-hidden">
@@ -154,7 +155,7 @@
                                                                             class="sr-only" required/>
                                                                     </label>
                                                                 </div>
-                                                                <p class="text-xs text-gray-500">DOCX, PNG, JPG en fazla
+                                                                <p class="text-xs text-gray-500">DOC-DOCX, PNG, JPG en fazla
                                                                     10MB</p>
                                                             </div>
                                                             <div v-if="form.file" class="w-full overflow-hidden">
@@ -200,6 +201,7 @@
                                             @click="open = false">geri dön
                                     </button>
                                     <button type="submit"
+                                            :disabled="form.processing"
                                             class="ml-4 inline-flex justify-center rounded-md border border-transparent bg-primary-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2">
                                         gönder
                                     </button>
@@ -214,11 +216,11 @@
 </template>
 
 <script setup>
-import {ref, computed, onMounted} from 'vue'
+import {ref, computed} from 'vue'
 import {Dialog, DialogOverlay, DialogTitle, TransitionChild, TransitionRoot} from '@headlessui/vue'
 import {MailIcon, XIcon} from '@heroicons/vue/outline'
-import {LinkIcon, CheckIcon, SelectorIcon, QuestionMarkCircleIcon} from '@heroicons/vue/solid'
-import {useForm, usePage} from "@inertiajs/inertia-vue3";
+import {CheckIcon, SelectorIcon} from '@heroicons/vue/solid'
+import {useForm} from "@inertiajs/inertia-vue3";
 import {
     Combobox,
     ComboboxButton,
@@ -227,6 +229,7 @@ import {
     ComboboxOption,
     ComboboxOptions,
 } from '@headlessui/vue'
+import BasicNotification from '@/Components/BasicNotification'
 
 const open = ref(false)
 
@@ -267,7 +270,10 @@ const categories = [
 function submit() {
     form.post(route('content.post'), {
         preserveScroll: true,
-        //onSuccess: () => form.reset(),
+        onSuccess: () => {
+            form.reset()
+            open.value = false
+        },
     })
 }
 

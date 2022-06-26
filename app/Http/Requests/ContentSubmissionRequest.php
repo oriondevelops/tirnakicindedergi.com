@@ -29,7 +29,7 @@ class ContentSubmissionRequest extends FormRequest
             'subject' => 'required',
             'description' => 'nullable',
             'category' => 'required',
-            'file' => 'required|max:10240|mimes:docx,jpg,png',
+            'file' => 'required|max:10240|mimes:doc,docx,jpg,png',
         ];
     }
 
@@ -48,7 +48,7 @@ class ContentSubmissionRequest extends FormRequest
             'category.required' => 'kategori alanı gereklidir.',
             'file.required' => 'lütfen bir dosya yükleyiniz.',
             'file.max' => "izin verilen dosya boyutunu aştınız.",
-            'file.mimes' => "dosya türü docx, jpg veya png olmalıdır.",
+            'file.mimes' => "dosya türü doc/docx, jpg veya png olmalıdır.",
         ];
     }
 }

@@ -1,7 +1,7 @@
 @component('mail::message')
 # İletişim Formu
 
-Dergi üzerinden yeni bir mesaj alındı:
+Site üzerinden yeni bir mesaj alındı:
 
 @component('mail::panel')
 # {{ $subject }}
