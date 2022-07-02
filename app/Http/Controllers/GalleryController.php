@@ -126,8 +126,8 @@ class GalleryController extends Controller
                 'description' => null,
                 'author' => 'Sevgi Tüccar',
                 'source' => $gallery . 'sevgi_tuccar-1' . $ext,
-                'width' => '1186',
-                'height' => '836',
+                'width' => '603',
+                'height' => '852',
             ],
             "Sevgi Tüccar 5" => [
                 'title' => null,
