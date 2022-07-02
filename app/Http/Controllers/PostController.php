@@ -13,10 +13,23 @@ class PostController extends Controller
      *
      * @return \Inertia\Response
      */
-    public function index($slug)
+    public function index()
     {
-        return Inertia::render('Posts/Single', [
-            'post' => WinkPost::find(['slug' => $slug])
+        return Inertia::render('Posts/Index', [
+            'posts' => WinkPost::published()
+                ->live()
+                ->with(['tags', 'author'])
+                ->orderBy('publish_date', 'DESC')
+                ->get()
+                ->map(function ($post) {
+                    return [
+                        'title' => $post->title,
+                        'excerpt' => $post->excerpt,
+                        'slug' => $post->slug,
+                        'publish_date' => $post->publish_date->translatedFormat('m F, Y'),
+                        'author' => $post->author,
+                    ];
+                }),
         ]);
     }
 

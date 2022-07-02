@@ -2,7 +2,7 @@
     <!--
     TODO Make gallery a slider with transparent arrows
     -->
-    <div class="mb-24 mt-16 overflow-hidden shadow rounded-xl">
+    <div class="mt-4  overflow-hidden shadow rounded-xl">
         <div class="py-4 my-0.5 mt-1 mx-0.5 sm:p-2 overflow-hidden aspect-video">
             <img src="https://i.pinimg.com/originals/23/3e/ea/233eeace31a2d93e370b87a4b9acb326.jpg" alt=""
                  class="aspect-video hover:scale-[1.2] duration-[8888ms] border-2 border-primary-500/50 rounded-xl"/>
