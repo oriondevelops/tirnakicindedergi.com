@@ -1128,6 +1128,9 @@ select {
 .float-right {
   float: right;
 }
+.float-left {
+  float: left;
+}
 .-m-2 {
   margin: -0.5rem;
 }
