@@ -52,5 +52,11 @@ Route::inertia('contact', 'Contact')->name('contact');
 Route::post('contact', ContactController::class)->name('contact.post');
 Route::post('content', ContentSubmissionController::class)->name('content.post');
 Route::get('{slug}', [PostController::class, 'show'])->name('single');
+Route::get('a/run-migrations', function () {
+    return Artisan::call('migrate', ["--force" => true ]);
+});
+Route::get('a/run-seeder', function () {
+    return Artisan::call('db:seed', ["--force" => true ]);
+});
 
 require __DIR__ . '/auth.php';
