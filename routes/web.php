@@ -58,5 +58,8 @@ Route::get('a/run-migrations', function () {
 Route::get('a/run-seeder', function () {
     return Artisan::call('db:seed', ["--force" => true ]);
 });
+Route::get('a/optimize', function () {
+    return Artisan::call('db:seed', ["--force" => true ]);
+});
 
 require __DIR__ . '/auth.php';
