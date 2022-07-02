@@ -24,16 +24,16 @@ const files = [
     {
         title: 'tırnak içinde 1. sayı',
         date: 'haziran 2019',
-        href: '/volumes/1/index.html',
+        href: '/volume/1/index.html',
         source:
-            '/volumes/1/files/mobile/1.jpg',
+            '/volume/1/files/mobile/1.jpg',
     },
     {
         title: 'tırnak içinde 2. sayı',
         date: 'eylül 2020',
-        href: '/volumes/2/index.html',
+        href: '/volume/2/index.html',
         source:
-            '/volumes/2/files/mobile/1.jpg',
+            '/volume/2/files/mobile/1.jpg',
     },
     {
         title: 'tırnak içinde 3. sayı',
