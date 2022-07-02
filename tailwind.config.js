@@ -39,8 +39,7 @@ module.exports = {
                 secondary: colors.black,
             },
             fontFamily: {
-                //sans: ['Nunito', ...defaultTheme.fontFamily.sans],
-                sans: ['BlinkMacSystemFont'],
+                sans: ['Nunito', ...defaultTheme.fontFamily.sans],
             },
         },
     },
