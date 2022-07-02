@@ -98,9 +98,9 @@ const user = {
 }
 const navigation = computed(() => [
     {name: 'Anasayfa', href: '/', current: isUrl('')},
-    {name: 'Sayılar', href: 'volumes', current: isUrl('volumes')},
-    {name: 'Hakkımızda', href: 'about', current: isUrl('about')},
-    {name: 'İletişim', href: 'contact', current: isUrl('contact')},
+    {name: 'Sayılar', href: '/volumes', current: isUrl('volumes')},
+    {name: 'Hakkımızda', href: '/about', current: isUrl('about')},
+    {name: 'İletişim', href: '/contact', current: isUrl('contact')},
 ])
 
 const userNavigation = [
