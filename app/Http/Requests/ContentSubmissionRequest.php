@@ -47,8 +47,8 @@ class ContentSubmissionRequest extends FormRequest
             'subject.required' => 'lütfen bir başlık giriniz.',
             'category.required' => 'kategori alanı gereklidir.',
             'file.required' => 'lütfen bir dosya yükleyiniz.',
-            'file.max' => "izin verilen dosya boyutunu aştınız.",
-            'file.mimes' => "dosya türü doc/docx, jpg veya png olmalıdır.",
+            'file.max' => 'izin verilen dosya boyutunu aştınız.',
+            'file.mimes' => 'dosya türü doc/docx, jpg veya png olmalıdır.',
         ];
     }
 }

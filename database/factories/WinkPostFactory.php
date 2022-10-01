@@ -28,6 +28,7 @@ class WinkPostFactory extends Factory
         // TODO may create relationship factories
         // https://laravel.com/docs/9.x/database-testing#has-many-relationships
         $title = $this->faker->words(2, true);
+
         return [
             'id' => $this->faker->uuid(),
             'slug' => Str::slug($title),

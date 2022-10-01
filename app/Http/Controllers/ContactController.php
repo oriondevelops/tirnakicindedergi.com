@@ -13,13 +13,14 @@ class ContactController extends Controller
     /**
      * Handle the incoming contact request.
      *
-     * @param ContactRequest $request
+     * @param  ContactRequest  $request
      * @return RedirectResponse
      */
     public function __invoke(ContactRequest $request)
     {
         Mail::to('iletisim@tirnakicindedergi.com')
             ->send(new MessageReceived($request->validated()));
+
         return Redirect::route('contact');
     }
 }

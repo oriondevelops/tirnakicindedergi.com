@@ -229,7 +229,7 @@ import {
     ComboboxOption,
     ComboboxOptions,
 } from '@headlessui/vue'
-import BasicNotification from '@/Components/BasicNotification'
+import BasicNotification from '@/Components/BasicNotification.vue'
 
 const open = ref(false)
 

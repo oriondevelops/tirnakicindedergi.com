@@ -88,7 +88,7 @@ import {Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuIte
 import {BellIcon, MenuIcon, XIcon} from '@heroicons/vue/outline'
 import {usePage} from "@inertiajs/inertia-vue3";
 import {computed} from "vue";
-import SubmitContent from './SubmitContent';
+import SubmitContent from './SubmitContent.vue';
 
 const user = {
     name: 'Tom Cook',

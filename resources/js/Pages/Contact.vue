@@ -85,7 +85,7 @@
 import {Head, useForm} from "@inertiajs/inertia-vue3";
 import {MailIcon} from '@heroicons/vue/outline'
 import {ref} from 'vue'
-import BasicNotification from '@/Components/BasicNotification'
+import BasicNotification from '@/Components/BasicNotification.vue'
 
 const form = useForm({
     name: null,

@@ -18,7 +18,6 @@ class WinkAuthorFactory extends Factory
      */
     protected $model = WinkAuthor::class;
 
-
     /**
      * Define the model's default state.
      *
@@ -27,6 +26,7 @@ class WinkAuthorFactory extends Factory
     public function definition()
     {
         $name = $this->faker->name();
+
         return [
             'id' => (string) Str::uuid(),
             'slug' => Str::slug($name),

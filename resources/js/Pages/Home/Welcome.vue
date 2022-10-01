@@ -1,8 +1,8 @@
 <script setup>
 import {Head, Link} from '@inertiajs/inertia-vue3';
-import Gallery from "@/Pages/Gallery/Index";
-import Announcement from '@/Pages/Home/Partials/Announcement'
-import LatestPosts from '@/Pages/Home/Partials/LatestPosts'
+import Gallery from "@/Pages/Gallery/Index.vue";
+import Announcement from '@/Pages/Home/Partials/Announcement.vue'
+import LatestPosts from '@/Pages/Home/Partials/LatestPosts.vue'
 import {ChevronDoubleRightIcon} from '@heroicons/vue/outline'
 
 defineProps({
@@ -63,7 +63,7 @@ const media = [
                 <div class="mt-3 sm:mt-0 sm:ml-4 group">
                     <Link :href="route('posts')">
                         <button type="button"
-                                class="inline-flex items-center px-2 py-0.5 border-primary-400 group-hover:border-primary-300 border-b-4 border-transparent rounded-md text-sm font-medium text-primary-500 group-hover:text-primary-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500">
+                                class="inline-flex items-center px-2 py-0.5 border-primary-400 border-primary-300 border-b-4 border-transparent rounded-md text-sm font-medium text-primary-500 group-hover:text-primary-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500">
                             Tümünü gör
                             <chevron-double-right-icon
                                 class="w-5 h-5 ml-2 px-0.5 py-0.5 text-primary-500 group-hover:text-primary-400"></chevron-double-right-icon>

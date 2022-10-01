@@ -4,10 +4,7 @@ namespace Database\Seeders;
 
 use Database\Factories\WinkAuthorFactory;
 use Database\Factories\WinkPostFactory;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use Wink\WinkAuthor;
-use Wink\WinkPost;
 
 class DatabaseSeeder extends Seeder
 {

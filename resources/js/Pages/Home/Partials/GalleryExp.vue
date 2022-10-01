@@ -18,7 +18,7 @@
 </template>
 
 <script setup>
-import GalleryMeta from "@/Pages/Home/Partials/GalleryMeta";
+import GalleryMeta from "@/Pages/Home/Partials/GalleryMeta.vue";
 </script>
 
 <style scoped>

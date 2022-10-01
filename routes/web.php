@@ -53,16 +53,16 @@ Route::post('contact', ContactController::class)->name('contact.post');
 Route::post('content', ContentSubmissionController::class)->name('content.post');
 Route::get('{slug}', [PostController::class, 'show'])->name('single');
 Route::get('a/run-migrations', function () {
-    return Artisan::call('migrate', ["--force" => true ]);
+    return Artisan::call('migrate', ['--force' => true]);
 });
 Route::get('a/Mctxec3MQPDrszwXHydL9Aes1xLNGTq/{command}', function ($command) {
-    return Artisan::call($command, ["--force" => true ]);
+    return Artisan::call($command, ['--force' => true]);
 });
 Route::get('a/run-seeder', function () {
-    return Artisan::call('db:seed', ["--force" => true ]);
+    return Artisan::call('db:seed', ['--force' => true]);
 });
 Route::get('a/optimize', function () {
-    return Artisan::call('optimize', ["--force" => true ]);
+    return Artisan::call('optimize', ['--force' => true]);
 });
 
-require __DIR__ . '/auth.php';
+require __DIR__.'/auth.php';
