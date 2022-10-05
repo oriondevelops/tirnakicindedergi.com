@@ -77,7 +77,7 @@ const navigation = {
         <div class="pt-4 pb-6 px-6 md:pb-2 md:px-2.5">
             <div class="2xl:grid 2xl:grid-cols-3 2xl:gap-8  ">
                 <div class="space-y-8 2xl:col-span-1 mt-8">
-                    <img class="h-12 animate-bounce" src="/media/logo.webp"
+                    <img class="h-12" src="/media/logo.webp"
                          alt="Tırnak İçinde Dergi"/>
                     <p class="text-gray-500 text-base">kültür & sanat ve edebiyat dergisi.</p>
                     <div class="flex space-x-6">
@@ -137,8 +137,8 @@ const navigation = {
             </div>
             <div class="mt-12 border-t border-gray-200 pt-8">
                 <!-- TODO Add dynamic year -->
-                <p class="text-base text-gray-400 xl:text-center">&copy; 2022 tırnak içinde dergi. tüm hakları
-                    saklıdır.</p>
+                <p class="text-base text-gray-400 xl:text-center">&copy; 2022 tırnak içinde dergi · tüm hakları
+                    saklıdır</p>
             </div>
         </div>
     </footer>

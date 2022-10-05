@@ -31,7 +31,7 @@ import PhotoSwipeLightbox from 'photoswipe/lightbox';
 import PhotoSwipeDynamicCaption from 'photoswipe-dynamic-caption-plugin/photoswipe-dynamic-caption-plugin.esm.js';
 import 'photoswipe/style.css';
 import 'photoswipe-dynamic-caption-plugin/photoswipe-dynamic-caption-plugin.css';
-import {defineProps, onMounted, onUnmounted} from "vue";
+import {onMounted, onUnmounted} from "vue";
 import {Head} from "@inertiajs/inertia-vue3";
 
 defineProps({

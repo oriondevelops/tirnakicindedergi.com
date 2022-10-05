@@ -25,24 +25,20 @@ const files = [
         title: 'tırnak içinde 1. sayı',
         date: 'haziran 2019',
         href: '/volume/1/index.html',
-        source:
-            '/volume/1/files/mobile/1.jpg',
+        source: '/volume/1/files/mobile/1.jpg',
     },
     {
         title: 'tırnak içinde 2. sayı',
         date: 'eylül 2020',
         href: '/volume/2/index.html',
-        source:
-            '/volume/2/files/mobile/1.jpg',
+        source: '/volume/2/files/mobile/1.jpg',
     },
     {
         title: 'tırnak içinde 3. sayı',
         date: 'aralık 2021',
-        href: null,
-        source:
-            'https://images.unsplash.com/photo-1582053433976-25c00369fc93?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=512&q=80',
+        href: '/volume/3/index.html',
+        source: '/volume/3/files/mobile/1.jpg',
     },
-    // More files...
 ]
 </script>
 
