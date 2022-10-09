@@ -1,5 +1,5 @@
 {
-    "name": "oriononair/tirnakicindedergi.com",
+    "name": "oriononairdev/tirnakicindedergi.com",
     "type": "project",
     "description": "kültür, sanat ve edebiyat dergisi.",
     "keywords": ["tirnak", "içinde", "dergi"],
@@ -23,6 +23,7 @@
         "laravel/sail": "^1.0.1",
         "mockery/mockery": "^1.4.4",
         "nunomaduro/collision": "^6.1",
+        "nunomaduro/larastan": "^2.0",
         "pestphp/pest": "^1.21",
         "pestphp/pest-plugin-laravel": "^1.2",
         "phpunit/phpunit": "^9.5.10",

@@ -49,7 +49,7 @@
             </li>
         </ul>
     </div>-->
-    <div class="grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-y-12 mt-8 mx-4">
+    <div class="grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-y-12 my-8 mx-4">
         <div class="lg:pl-20">
             <div class="max-w-xs px-2.5 lg:max-w-none">
                 <img

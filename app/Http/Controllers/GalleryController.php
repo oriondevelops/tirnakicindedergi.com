@@ -241,6 +241,7 @@ class GalleryController extends Controller
                 'height' => '4032',
             ],
         ]);
+
         $media = $media->shuffle();
 
         return Inertia::render('Gallery/Index', [

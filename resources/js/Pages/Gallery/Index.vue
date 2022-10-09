@@ -41,7 +41,6 @@ defineProps({
 const lightbox = new PhotoSwipeLightbox({
     gallery: '#gallery',
     children: 'a',
-    // set background opacity
     bgOpacity: 0.7,
     pswpModule: () => import('photoswipe'),
 });

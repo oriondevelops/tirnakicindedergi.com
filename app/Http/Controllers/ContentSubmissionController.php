@@ -13,7 +13,7 @@ class ContentSubmissionController extends Controller
     /**
      * Handle the incoming request.
      *
-     * @param  Request  $request
+     * @param  ContentSubmissionRequest  $request
      * @return RedirectResponse
      */
     public function __invoke(ContentSubmissionRequest $request)
