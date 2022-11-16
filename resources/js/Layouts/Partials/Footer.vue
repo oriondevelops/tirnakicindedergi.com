@@ -82,6 +82,7 @@ const navigation = {
                     <p class="text-gray-500 text-base">kültür & sanat ve edebiyat dergisi.</p>
                     <div class="flex space-x-6">
                         <a v-for="item in navigation.social" :key="item.name" :href="item.href"
+                           target="_blank"
                            class="text-gray-400 hover:text-gray-500">
                             <span class="sr-only">{{ item.name }}</span>
                             <component :is="item.icon" class="h-6 w-6" aria-hidden="true"/>
