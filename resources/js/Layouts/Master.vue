@@ -9,7 +9,7 @@ import Footer from '@/Layouts/Partials/Footer.vue'
         <div class="min-h-screen bg-white rounded-md md:rounded lg:rounded-lg">
             <div class="p-0 md:p-6">
                 <Link :href="route('welcome')">
-                    <img src="/media/banner.png" width="940" height="198" alt=""
+                    <img src="/media/banner.webp" width="940" height="198" alt=""
                          class="border-t-8 border-secondary hidden md:flex"
                          sizes="(max-width: 940px) 100vw, 940px"/>
                 </Link>

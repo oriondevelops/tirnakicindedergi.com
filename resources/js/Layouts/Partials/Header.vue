@@ -14,8 +14,8 @@
                     </div>
                     <div class="flex-shrink-0 flex items-center md:mr-6">
                         <Link :href="route('welcome')">
-                            <img class="block lg:hidden h-7 w-auto" src="/media/logo.png" alt="tırnak içinde dergi"/>
-                            <img class="hidden lg:block h-7 w-auto" src="/media/logo.png" alt="tırnak içinde dergi"/>
+                            <img class="block lg:hidden h-7 w-auto" src="/media/logo.webp" alt="tırnak içinde dergi"/>
+                            <img class="hidden lg:block h-7 w-auto" src="/media/logo.webp" alt="tırnak içinde dergi"/>
                         </Link>
                     </div>
                     <div class="hidden md:ml-0 md:flex md:items-center md:space-x-4">
