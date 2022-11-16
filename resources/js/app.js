@@ -5,6 +5,7 @@ import { createInertiaApp, Link } from '@inertiajs/inertia-vue3';
 import { InertiaProgress } from '@inertiajs/progress';
 import Master from '@/Layouts/Master.vue';
 import {resolvePageComponent} from "laravel-vite-plugin/inertia-helpers";
+import VueMatomo from 'vue-matomo'
 
 const appName = window.document.getElementsByTagName('title')[0]?.innerText || 'tırnak içinde dergi';
 
@@ -22,6 +23,10 @@ createInertiaApp({
     setup({ el, app, props, plugin }) {
         return createApp({ render: () => h(app, props) })
             .use(plugin)
+            .use(VueMatomo, {
+                host: 'https://matomo.tirnakicindedergi.com/',
+                siteId: 4,
+            })
             .mixin({ methods: { route } })
             .component('Link', Link)
             .mount(el);

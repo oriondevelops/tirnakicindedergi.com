@@ -28,6 +28,7 @@
         "@tailwindcss/aspect-ratio": "^0.4.0",
         "@tailwindcss/typography": "^0.5.1",
         "photoswipe": "^5.2.8",
-        "photoswipe-dynamic-caption-plugin": "^1.1.1"
+        "photoswipe-dynamic-caption-plugin": "^1.1.1",
+        "vue-matomo": "^4.2.0"
     }
 }
