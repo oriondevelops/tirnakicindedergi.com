@@ -12,7 +12,7 @@
                 </time>
             </header>
             <Link :href="route('single', post.slug)" class="mt-2 block">
-                <p class="text-lg font-semibold text-gray-900 capitalize">
+                <p class="text-lg font-semibold text-gray-900">
                     {{ post.title }}
                 </p>
                 <p class="mt-3 text-md text-gray-500">

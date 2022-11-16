@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Inertia\Inertia;
+use Inertia\Response;
 use Wink\WinkPost;
 
 class PostController extends Controller
@@ -10,9 +11,9 @@ class PostController extends Controller
     /**
      * List all posts.
      *
-     * @return \Inertia\Response
+     * @return Response
      */
-    public function index()
+    public function index(): Response
     {
         return Inertia::render('Posts/Index', [
             'posts' => WinkPost::published()
@@ -35,7 +36,7 @@ class PostController extends Controller
     /**
      * Show the single post.
      *
-     * @return \Inertia\Response
+     * @return Response
      */
     public function show($slug)
     {
