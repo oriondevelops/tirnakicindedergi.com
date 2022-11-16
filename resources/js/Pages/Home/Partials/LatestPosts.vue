@@ -15,8 +15,8 @@
                 <p class="text-lg font-semibold text-gray-900">
                     {{ post.title }}
                 </p>
-                <p class="mt-3 text-md text-gray-500">
-                    {{ post.excerpt }}
+                <p v-html="post.excerpt"
+                    class="mt-3 text-md text-gray-500">
                 </p>
                 <div class="mt-3">
                     <div class="relative flex items-center text-sm font-medium text-primary-600 hover:text-primary-500">

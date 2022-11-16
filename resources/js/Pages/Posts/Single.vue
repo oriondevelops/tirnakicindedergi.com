@@ -30,7 +30,7 @@
                                             <div v-if="publish_date" class="flex items-center space-x-2" title="Yayınlanma Tarihi">
                                                 <CalendarIcon class="h-5 w-5 text-gray-400" aria-hidden="true"/>
                                                 <span class="text-gray-900 text-sm font-medium"><time
-                                                    datetime="2020-12-02">{{ publish_date }}</time></span>
+                                                    :datetime="publish_date">{{ publish_date }}</time></span>
                                             </div>
                                             <div v-if="content" class="flex items-center space-x-2 content-center items-center self-center" title="Okuma Süresi">
                                                 <ClockIcon class="h-5 w-5 text-gray-400" aria-hidden="true"/>

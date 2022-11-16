@@ -49,7 +49,7 @@ class PostController extends Controller
         return Inertia::render('Posts/Single', [
             'post' => $post,
             'content' => (string) $post->content,
-            'publish_date' => $post->publish_date->translatedFormat('m F, Y'),
+            'publish_date' => $post->publish_date->translatedFormat('d F, Y'),
         ]);
     }
 }

@@ -32,7 +32,7 @@ Route::get('/', function () {
                     'title' => $post->title,
                     'excerpt' => $post->excerpt,
                     'slug' => $post->slug,
-                    'publish_date' => $post->publish_date->translatedFormat('m F, Y'),
+                    'publish_date' => $post->publish_date->translatedFormat('d F, Y'),
                     'author' => $post->author,
                 ];
             }),
